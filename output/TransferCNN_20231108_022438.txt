@@ -1,0 +1,114 @@
+Layers and Trainable Parameters of TransferCNN :
+
+Layer name: features
+Trainable Parameters: 11176512
+Sequential(
+  (0): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+  (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (2): ReLU(inplace=True)
+  (3): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+  (4): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (5): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): Sequential(
+        (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (6): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): Sequential(
+        (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (7): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): Sequential(
+        (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (8): AdaptiveAvgPool2d(output_size=(1, 1))
+)
+Layer name: fc
+Trainable Parameters: 133898
+Sequential(
+  (0): Flatten(start_dim=1, end_dim=-1)
+  (1): Linear(in_features=512, out_features=256, bias=True)
+  (2): ReLU()
+  (3): Dropout(p=0.5, inplace=False)
+  (4): Linear(in_features=256, out_features=10, bias=True)
+)
+Running on device: mps
+Train Losses: [1.2245157632550137, 0.8841868925193755, 0.7231012980810587, 0.6130118285396964, 0.5210683406333624, 0.43600851612467073, 0.38046245354389197, 0.3272384754426763, 0.259712728165848, 0.24977886729819493, 0.20598205736607686, 0.20317207295084116, 0.14779675062057596, 0.1443703693848089, 0.15677176426958486, 0.16462734662474837, 0.09122067648882132, 0.10583396145196688, 0.1713070197687684, 0.07739431245171453, 0.08019926933227516, 0.10924330139005353, 0.07856946237881621, 0.08273951413461603, 0.10949693658717691, 0.07053499110242288, 0.10204255976758883, 0.0680441415581162, 0.05698505743135487, 0.07941787302841433]
+Train Accuracies: [60.432, 72.248, 77.344, 80.678, 83.754, 86.23, 88.116, 89.682, 91.712, 92.116, 93.566, 93.704, 95.296, 95.456, 95.164, 95.052, 97.06, 96.594, 94.96, 97.52, 97.41, 96.606, 97.516, 97.488, 96.774, 97.876, 96.988, 97.94, 98.146, 97.6]
+Evaluating on device: mps
+Test Accuracy: 79.78%
+Confusion Matrix:
+[[822   7  45  19  25   4   8   9  36  25]
+ [ 15 850   4  10   3   6  10   6  19  77]
+ [ 47   2 738  43  47  49  43  22   6   3]
+ [ 16   3  62 620  59 138  53  35   9   5]
+ [  9   1  39  52 753  49  37  52   7   1]
+ [  8   1  30 147  22 722  24  38   3   5]
+ [  5   6  22  41  19  26 872   6   2   1]
+ [  8   2  13  30  21  43   8 861   2  12]
+ [ 50  20   6   9   3   5  10   2 872  23]
+ [ 20  49   8  11   1   6   7  14  16 868]]
+Classification Report:
+{'Airplane': {'precision': 0.822, 'recall': 0.822, 'f1-score': 0.822, 'support': 1000}, 'Automobile': {'precision': 0.9032943676939427, 'recall': 0.85, 'f1-score': 0.8758371973209684, 'support': 1000}, 'Bird': {'precision': 0.7631851085832472, 'recall': 0.738, 'f1-score': 0.7503812913065582, 'support': 1000}, 'Cat': {'precision': 0.6313645621181263, 'recall': 0.62, 'f1-score': 0.6256306760847627, 'support': 1000}, 'Deer': {'precision': 0.7901364113326338, 'recall': 0.753, 'f1-score': 0.7711213517665131, 'support': 1000}, 'Dog': {'precision': 0.6889312977099237, 'recall': 0.722, 'f1-score': 0.705078125, 'support': 1000}, 'Frog': {'precision': 0.8134328358208955, 'recall': 0.872, 'f1-score': 0.8416988416988417, 'support': 1000}, 'Horse': {'precision': 0.8239234449760765, 'recall': 0.861, 'f1-score': 0.8420537897310513, 'support': 1000}, 'Ship': {'precision': 0.897119341563786, 'recall': 0.872, 'f1-score': 0.8843813387423936, 'support': 1000}, 'Truck': {'precision': 0.8509803921568627, 'recall': 0.868, 'f1-score': 0.8594059405940594, 'support': 1000}, 'accuracy': 0.7978, 'macro avg': {'precision': 0.7984367761955495, 'recall': 0.7978000000000001, 'f1-score': 0.7977588552245148, 'support': 10000}, 'weighted avg': {'precision': 0.7984367761955494, 'recall': 0.7978, 'f1-score': 0.7977588552245148, 'support': 10000}}

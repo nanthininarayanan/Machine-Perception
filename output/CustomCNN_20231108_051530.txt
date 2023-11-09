@@ -1,0 +1,50 @@
+Layers and Trainable Parameters of CustomCNN :
+
+Layer name: conv1
+Trainable Parameters: 1792
+Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+Layer name: bn1
+Trainable Parameters: 128
+BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+Layer name: conv2
+Trainable Parameters: 73856
+Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+Layer name: bn2
+Trainable Parameters: 256
+BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+Layer name: conv3
+Trainable Parameters: 295168
+Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+Layer name: bn3
+Trainable Parameters: 512
+BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+Layer name: pool
+Trainable Parameters: 0
+MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+Layer name: fc1
+Trainable Parameters: 2097664
+Linear(in_features=4096, out_features=512, bias=True)
+Layer name: fc2
+Trainable Parameters: 65664
+Linear(in_features=512, out_features=128, bias=True)
+Layer name: fc3
+Trainable Parameters: 1290
+Linear(in_features=128, out_features=10, bias=True)
+Running on device: mps
+Train Losses: [1.1998959028293745, 0.7999987496791249, 0.6449320266167475, 0.5336271978948106, 0.4372262335021909, 0.3486134080682248, 0.27647545582406885, 0.21371741571850356, 0.17220916161468575, 0.13254084540751507, 0.11308272708411747, 0.09382002465396384, 0.09016146979457684, 0.07346462308738766, 0.07304187760514746, 0.06258167979644205, 0.06459870791173765, 0.05524456481240496, 0.05565217252992337, 0.05584754781509357, 0.04449481858750434, 0.04726375194734939, 0.04627140072905951, 0.04290809161229601, 0.04153132910327461, 0.04274865778760831, 0.03707283514858442, 0.038367100915628026, 0.0361173171012811, 0.04007256908713137]
+Train Accuracies: [56.756, 71.926, 77.504, 81.498, 84.574, 87.69, 90.23, 92.464, 94.064, 95.376, 96.046, 96.766, 96.834, 97.498, 97.55, 97.882, 97.85, 98.17, 98.13, 98.146, 98.534, 98.452, 98.538, 98.638, 98.648, 98.612, 98.848, 98.77, 98.816, 98.74]
+Evaluating on device: mps
+Test Accuracy: 80.57%
+Confusion Matrix:
+[[854  16  31  17   9   2   3   9  39  20]
+ [ 11 918   3  10   0   2   1   0  14  41]
+ [ 62   2 723  55  37  40  43  24  11   3]
+ [ 24  10  50 690  34 113  29  27  10  13]
+ [ 15   3  52  57 738  40  33  50   9   3]
+ [ 15   4  49 165  27 692  12  30   3   3]
+ [  5   3  31  57  15  14 860   6   6   3]
+ [ 12   1  29  30  28  45   2 844   3   6]
+ [ 56  16   5   6   0   3   2   4 880  28]
+ [ 22  71   5  17   1   4   1   8  13 858]]
+Classification Report:
+{'Airplane': {'precision': 0.7936802973977695, 'recall': 0.854, 'f1-score': 0.8227360308285163, 'support': 1000}, 'Automobile': {'precision': 0.8793103448275862, 'recall': 0.918, 'f1-score': 0.898238747553816, 'support': 1000}, 'Bird': {'precision': 0.7392638036809815, 'recall': 0.723, 'f1-score': 0.731041456016178, 'support': 1000}, 'Cat': {'precision': 0.625, 'recall': 0.69, 'f1-score': 0.655893536121673, 'support': 1000}, 'Deer': {'precision': 0.8301462317210349, 'recall': 0.738, 'f1-score': 0.7813658020116464, 'support': 1000}, 'Dog': {'precision': 0.724607329842932, 'recall': 0.692, 'f1-score': 0.7079283887468031, 'support': 1000}, 'Frog': {'precision': 0.8722109533468559, 'recall': 0.86, 'f1-score': 0.866062437059416, 'support': 1000}, 'Horse': {'precision': 0.8423153692614771, 'recall': 0.844, 'f1-score': 0.8431568431568432, 'support': 1000}, 'Ship': {'precision': 0.8906882591093117, 'recall': 0.88, 'f1-score': 0.8853118712273642, 'support': 1000}, 'Truck': {'precision': 0.8773006134969326, 'recall': 0.858, 'f1-score': 0.8675429726996967, 'support': 1000}, 'accuracy': 0.8057, 'macro avg': {'precision': 0.8074523202684881, 'recall': 0.8056999999999999, 'f1-score': 0.8059278085421953, 'support': 10000}, 'weighted avg': {'precision': 0.8074523202684881, 'recall': 0.8057, 'f1-score': 0.8059278085421955, 'support': 10000}}
